@@ -1,4 +1,5 @@
-const { AppDataSource } = require("../config/ormconfig");
+const { AppDataSource } = require("../../config/ormconfig");
+const { Video } = require("../../domain/Video");
 
 class VideoRepository {
   constructor() {

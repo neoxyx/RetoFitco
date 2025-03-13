@@ -1,4 +1,5 @@
-const { AppDataSource } = require("../config/ormconfig");
+const { AppDataSource } = require("../../config/ormconfig");
+const { User } = require("../../domain/User");
 
 class UserRepository {
   constructor() {

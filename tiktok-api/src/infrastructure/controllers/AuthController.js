@@ -1,11 +1,15 @@
-const JwtService = require("../services/JwtService");
+const AuthenticateUserUseCase = require("../../application/AuthenticateUserUseCase");
 
 class AuthController {
-  static login(req, res) {
-    const { username } = req.body;
-    const token = JwtService.generateToken({ id: 1, username });
-    res.json({ token });
+  async login(req, res) {
+    try {
+      const { email, password } = req.body;
+      const token = await AuthenticateUserUseCase.execute(email, password);
+      res.status(200).json({ token });
+    } catch (error) {
+      res.status(401).json({ error: error.message });
+    }
   }
 }
 
-module.exports = AuthController;
+module.exports = new AuthController();
