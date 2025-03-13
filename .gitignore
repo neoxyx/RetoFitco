@@ -1,0 +1,26 @@
+# Ignorar node_modules en backend y frontend
+tiktok-api/node_modules/
+appTikTok/node_modules/
+
+# Ignorar dependencias de npm y Yarn
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Ignorar archivos de entorno
+tiktok-api/.env
+appTikTok/.env
+.env
+
+# Ignorar archivos de compilación y logs
+dist/
+build/
+out/
+*.log
+
+# Ignorar configuraciones del editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
